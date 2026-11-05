@@ -1,0 +1,71 @@
+COBBLESHOP - boutiques en interface (/shop) pour Forge 1.20.1
+==============================================================
+
+Mod 100% SERVEUR : les joueurs n'ont rien a installer.
+Interface = coffre de 6 lignes, economie integree (/balance, /pay, /eco).
+
+
+1) OBTENIR LE FICHIER .JAR  (5 minutes, rien a installer sur ton PC)
+--------------------------------------------------------------------
+1. Cree un compte gratuit sur github.com, puis "New repository" (prive ou public).
+2. Envoie TOUT le contenu de ce dossier dans le depot (bouton "Add file" > "Upload files").
+   Le dossier cache ".github" doit etre envoye aussi.
+3. Onglet "Actions" : la compilation demarre toute seule (ou "Build" > "Run workflow").
+4. Attends ~3-5 minutes (coche verte), clique sur la derniere execution,
+   telecharge "cobbleshop-jar" en bas de page, dezippe : tu obtiens cobbleshop-1.0.0.jar.
+5. Mets le .jar dans le dossier "mods" de ton serveur Forge 1.20.1 (47+).
+
+(Autre methode : JDK 17 + Gradle 8.5 installes, puis "gradle build" ici ;
+ le jar sort dans build/libs/.)
+
+
+2) PREMIER LANCEMENT
+--------------------
+Le mod cree config/cobbleshop/ avec :
+  config.json    -> symbole de la monnaie ("$") et solde de depart
+  shops.json     -> les boutiques (une boutique d'exemple au debut)
+  balances.json  -> l'argent des joueurs
+
+
+3) COMMANDES JOUEURS
+--------------------
+/shop              ouvre les boutiques
+/shop open <id>    ouvre une boutique precise
+/balance (/bal)    voir son argent
+/pay <joueur> <montant>
+
+Dans une boutique :
+  Clic gauche = acheter x1        Maj + clic gauche = acheter x64
+  Clic droit  = vendre x1         Maj + clic droit  = tout vendre
+
+
+4) COMMANDES ADMIN (operateur)
+------------------------------
+/shop create <id>                     cree une boutique
+/shop title <id> <titre>              titre affiche
+/shop icon <id>                       icone = objet tenu en main
+/shop add <id> <achat> [vente]        ajoute l'objet TENU EN MAIN
+                                      (la quantite en main = taille du lot)
+/shop addcmd <id> <prix> <commande>   article qui lance une commande a l'achat
+                                      ({player} = nom de l'acheteur) ; l'objet en main sert d'icone
+/shop price <id> <n> <achat> [vente]  modifie les prix de l'article n
+/shop remove <id> <n>                 retire l'article n
+/shop delete <id>                     supprime la boutique
+/shop info <id> | /shop list | /shop help
+/eco give|take|set|get <joueur> [montant]
+
+Prix 0 = non achetable (ou non vendable). Les objets gardent leur NBT
+(donc les objets Cobblemon et les objets renommes fonctionnent).
+
+
+5) EXEMPLES COBBLEMON
+---------------------
+  /shop create balls
+  (tiens des Poke Balls en main)  /shop add balls 200
+  (tiens une Super Ball)          /shop add balls 600
+
+  Vendre un Pokemon via commande (a adapter selon ta version de Cobblemon) :
+  (tiens un objet-icone)  /shop addcmd pokemon 5000 givepokemon {player} pikachu level=5
+
+Pour donner a une boutique son propre raccourci (ex. /balls), utilise ton mod XYZ :
+  nom = balls    commande = shop open balls
