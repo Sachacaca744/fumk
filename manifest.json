@@ -1,0 +1,41 @@
+{
+    "generated":  "2026-11-06T18:28:18",
+    "serverAddress":  "jensen-scrambler.tun.ply.gg",
+    "files":  [
+                  {
+                      "path":  "mods/Cobblemon-forge-1.5.2+1.20.1.jar",
+                      "url":  "https://raw.githubusercontent.com/Sachacaca744/fumk/main/pack/mods/Cobblemon-forge-1.5.2%2B1.20.1.jar",
+                      "sha1":  "02601f79f0c442b75463538da7a3c7f260fda42e",
+                      "size":  104105045,
+                      "keep":  false
+                  },
+                  {
+                      "path":  "mods/constructionwand-1.20.1-2.11.jar",
+                      "url":  "https://raw.githubusercontent.com/Sachacaca744/fumk/main/pack/mods/constructionwand-1.20.1-2.11.jar",
+                      "sha1":  "80bd5223cd8984dc1038cb9f2d1cb6b97f31998a",
+                      "size":  210312,
+                      "keep":  false
+                  },
+                  {
+                      "path":  "mods/kotlinforforge-4.12.0-all.jar",
+                      "url":  "https://raw.githubusercontent.com/Sachacaca744/fumk/main/pack/mods/kotlinforforge-4.12.0-all.jar",
+                      "sha1":  "962fdb760409d6d71cbf079235f1ca94e3863a22",
+                      "size":  7442998,
+                      "keep":  false
+                  },
+                  {
+                      "path":  "mods/xyz-1.20.1-1.0.0.jar",
+                      "url":  "https://raw.githubusercontent.com/Sachacaca744/fumk/main/pack/mods/xyz-1.20.1-1.0.0.jar",
+                      "sha1":  "50d8ad55b25c7a500a118bdb576bca266dab0870",
+                      "size":  17210,
+                      "keep":  false
+                  },
+                  {
+                      "path":  "mods/xyzmenu-1.0.0.jar",
+                      "url":  "https://raw.githubusercontent.com/Sachacaca744/fumk/main/pack/mods/xyzmenu-1.0.0.jar",
+                      "sha1":  "2db9c6dd2ff216097424eaa7935ec38b1e013629",
+                      "size":  354,
+                      "keep":  false
+                  }
+              ]
+}

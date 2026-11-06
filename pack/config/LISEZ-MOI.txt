@@ -1,0 +1,1 @@
+Optionnel : fichiers de configuration a distribuer aux joueurs (copies du dossier config).
